@@ -14,4 +14,12 @@ public class FileUtil {
         }
     }
 
+    public boolean checkFileType(String fileName, String[] types) {
+        fileName = fileName.toLowerCase();
+        for (String type : types) {
+            return fileName.endsWith(type.toLowerCase());
+        }
+        return false;
+    }
+
 }
