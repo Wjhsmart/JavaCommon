@@ -4,7 +4,9 @@ import com.alibaba.fastjson.JSON;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by WangGenshen on 7/21/15.
@@ -31,6 +33,14 @@ public class FastJsonTest {
         highCharts.setTitle(title);
         highCharts.setSeries(seriesList);
         System.out.println(JSON.toJSON(highCharts));
+    }
+
+    @Test
+    public void testMapJson() {
+        Map<String, String> map = new HashMap<>();
+        map.put("a", "a");
+        map.put("b", "b");
+        System.out.println(JSON.toJSONString(map));
     }
 
 }
